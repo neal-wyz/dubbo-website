@@ -49,7 +49,7 @@ weight: 6
 | readinessProbe | readiness-probe | string | 可选 | | 服务治理 | 概念和格式对应 k8s 体系 readiness probe | 3.0.0以上版本 |
 | startupProbe | startup-probe | string | 可选 | | 服务治理 | 概念和格式对应 k8s 体系 startup probe | 3.0.0以上版本 |
 | registerMode | register-mode | string | 可选 | all | 服务治理 | 控制地址注册行为，应用级服务发现迁移用。<br/>* instance 只注册应用级地址；<br/>* interface 只注册接口级地址；<br/>* all(默认) 同时注册应用级和接口级地址； | 3.0.0以上版本 |
-| enableEmptyProtection | enable-empty-protection | boolean | 可选 | true | 服务治理 | 是否全局启用消费端的空地址列表保护，开启后注册中心的空地址推送将被忽略，默认 true | 3.0.0以上版本 |
+| enableEmptyProtection | enable-empty-protection | boolean | 可选 | false | 服务治理 | 是否全局启用消费端的空地址列表保护，开启后注册中心的空地址推送将被忽略，默认 true | 3.0.0以上版本 |
 | parameters | 无 | Map<string, string> | 可选 | | 服务治理 | 扩展预留，可扩展定义任意参数，所有扩展参数都将原样反映在 URL 配置上 | 2.7.0以上版本 |
 
 
@@ -174,7 +174,7 @@ weight: 6
 | preferred | preferred | boolean | 可选 | | 服务治理 | 是否作为首选注册中心。当订阅多注册中心时，如果设为true，该注册中心作为首选 | 2.7.5以上版本 |
 | weight | weight | int | 可选 | | 性能调优 | 注册流量权重。使用多注册中心时，可通过该值调整注册流量的分布，当设置首选注册中心时该值不生效 | 2.7.5以上版本 |
 | registerMode | register-mode | string | 可选 | all | 服务治理 | 控制地址注册行为，应用级服务发现迁移用。<br/>* instance 只注册应用级地址；<br/>* interface 只注册接口级地址；<br/>* all(默认) 同时注册应用级和接口级地址； | 3.0.0以上版本 |
-| enableEmptyProtection | enable-empty-protection | boolean | 可选 | true | 服务治理 | 是否全局启用消费端的空地址列表保护，开启后注册中心的空地址推送将被忽略，默认 true | 3.0.0以上版本 |
+| enableEmptyProtection | enable-empty-protection | boolean | 可选 | false | 服务治理 | 是否全局启用消费端的空地址列表保护，开启后注册中心的空地址推送将被忽略，默认 true | 3.0.0以上版本 |
 | parameters | 无 | Map<string, string> | 可选 | | 服务治理 | 扩展预留，可扩展定义任意参数，所有扩展参数都将原样反映在 URL 配置上 | 2.0.0以上版本 |
 
 ### config-center
